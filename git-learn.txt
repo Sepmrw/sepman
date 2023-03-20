@@ -1,0 +1,154 @@
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop
+$ mkdir sepehr
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop
+$ git init/sepehr
+git: 'init/sepehr' is not a git command. See 'git --help'.
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop
+$ cd sepehr
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr
+$ git init
+Initialized empty Git repository in C:/Users/Sepehr/Desktop/sepehr/.git/
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git config user.name "sepmrw"
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git config user.email "sprmrw@gmail.com"
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ touch file.txt
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git add file.txt
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file.txt
+
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git commit -m "new file added"
+[master (root-commit) 4b66a7d] new file added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file.txt
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git log
+commit 4b66a7d8ffe403a2688bc1fe9d5539d400edcda8 (HEAD -> master)
+Author: sepmrw <sprmrw@gmail.com>
+Date:   Mon Mar 6 15:39:04 2023 +0330
+
+    new file added
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ nano file.txt
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git diff
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/file.txt b/file.txt
+index e69de29..5ce120a 100644
+--- a/file.txt
++++ b/file.txt
+@@ -0,0 +1,4 @@
++line 1
++line 2
++line 3 done
++
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git commite -m "changes added"
+git: 'commite' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git commit -m "chaneges added"
+[master 7560b56] chaneges added
+ 1 file changed, 4 insertions(+)
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git diff
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git log
+commit 7560b5646c2057b3a6dc7e69b6a7e1157565987d (HEAD -> master)
+Author: sepmrw <sprmrw@gmail.com>
+Date:   Mon Mar 6 15:42:23 2023 +0330
+
+    chaneges added
+
+commit 4b66a7d8ffe403a2688bc1fe9d5539d400edcda8
+Author: sepmrw <sprmrw@gmail.com>
+Date:   Mon Mar 6 15:39:04 2023 +0330
+
+    new file added
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git log head
+commit 7560b5646c2057b3a6dc7e69b6a7e1157565987d (HEAD -> master)
+Author: sepmrw <sprmrw@gmail.com>
+Date:   Mon Mar 6 15:42:23 2023 +0330
+
+    chaneges added
+
+commit 4b66a7d8ffe403a2688bc1fe9d5539d400edcda8
+Author: sepmrw <sprmrw@gmail.com>
+Date:   Mon Mar 6 15:39:04 2023 +0330
+
+    new file added
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git log --online
+fatal: unrecognized argument: --online
+
+Sepehr@DESKTOP-EQN1JNG MINGW64 ~/desktop/sepehr (master)
+$ git log --oneline
+7560b56 (HEAD -> master) chaneges added
+4b66a7d new file added
